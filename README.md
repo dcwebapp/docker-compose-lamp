@@ -229,6 +229,22 @@ Example:
 }
 ```
 
+In multiproject setup:
+
+```json
+"configurations": [
+    {
+        "name": "Listen for Xdebug",
+        "type": "php",
+        "request": "launch",
+        "port": <PORT>,
+        "pathMappings": {
+          "/var/www/html/[project name]": "${workspaceFolder}"
+        }
+    }
+]
+```
+
 Now, make a breakpoint and run debug.
 
 **Tip!** After theses configurations, you may need to restart container.
